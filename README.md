@@ -35,7 +35,7 @@ F = data (events)
 
 ![Output table of data analysis](data/figure_2.png)
 
-Comments: If `mode` is set to `'cat'`, file concatenation only occurs when an event is not finished at the end of a file (event searching is performed similar to a rolling window, only data files in window are loaded into memory). All results of the data analysis (events) are written to an Excel-file and additionally saved as MATLAB data file (.mat).
+Comments: If `mode` is set to `'cat'`, file concatenation only occurs when an event is not finished at the end of a file (event searching is performed similar to a rolling window, only data files in window are loaded into memory). All results of the data analysis (events) are written to an Excel file and additionally saved as MATLAB data file (.mat).
 
 
 ### Files are stored in different folders respectively on different drives
