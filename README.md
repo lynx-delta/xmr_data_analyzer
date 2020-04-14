@@ -3,21 +3,21 @@
 Scripts for reading and analyzing data from BARTEC SYSCOM vibration and motion measurement devices (saved as .xmr file)
 
 
-#### Visualize data in time and frequency domain
+### Visualize data in time and frequency domain
 
 Use `eval_xmr.m` to perform a fast Fourier transform (FFT) and to visualize the data in the time and frequency domain:
 
 ```matlab
 [M, F] = eval_xmr();
 ```
-with:
-M = file metadata
+with:\
+M = file metadata\
 F = data
 
 ![Data in time and frequency domain](data/figure_1.png)
 
 
-#### Automatically scan recorded data and search for events (e.g. passing trains)
+### Automatically scan recorded data and search for events (e.g. passing trains)
 
 Use `eval_xmr.m` to search for events and to analyze the data according to German Industry Standards DIN 45669-1 and DIN 4150-2:
 
@@ -29,8 +29,8 @@ mode = 'cat';       % Automatically concatenates and evaluates all MR3000C files
 
 [M, F] = eval_xmr(chn, bg_noise, mode);
 ```
-with:
-M = file metadata
+with:\
+M = file metadata\
 F = data (events)
 
 ![Output table of data analysis](data/figure_2.png)
@@ -38,7 +38,7 @@ F = data (events)
 Comments: If `mode` is set to `'cat'`, file concatenation only occurs when an event is not finished at the end of a file (event searching is performed similar to a rolling window, only data files in window are loaded into memory). All results of the data analysis (events) are written to an Excel-file and additionally saved as MATLAB data file (.mat).
 
 
-#### Files are stored in different folders respectively on different drives
+### Files are stored in different folders respectively on different drives
 
 Use `exec_eval_xmr.m` together with `eval_xmr.m` to search for events and to analyze the data if files are stored in different folders:
 
@@ -56,7 +56,7 @@ set_3 = {chn, bg_noise_3, mode};
 
 F = exec_eval_xmr(set_1, set_2, set_3);
 ```
-with:
+with:\
 F = data (events) per folder
 
 
