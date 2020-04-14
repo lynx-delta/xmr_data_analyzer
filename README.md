@@ -10,8 +10,9 @@ Use `eval_xmr.m` to perform a fast Fourier transform (FFT) and to visualize the 
 ```matlab
 [M, F] = eval_xmr();
 ```
-with M = file metadata
-     F = data
+with:
+M = file metadata
+F = data
 
 ![Data in time and frequency domain](data/figure_1.png)
 
@@ -28,8 +29,9 @@ mode = 'cat';       % Automatically concatenates and evaluates all MR3000C files
 
 [M, F] = eval_xmr(chn, bg_noise, mode);
 ```
-with M = file metadata
-     F = data (events)
+with:
+M = file metadata
+F = data (events)
 
 ![Output table of data analysis](data/figure_2.png)
 
@@ -54,6 +56,7 @@ set_3 = {chn, bg_noise_3, mode};
 
 F = exec_eval_xmr(set_1, set_2, set_3);
 ```
-with F = data (events) per folder
+with:
+F = data (events) per folder
 
 
